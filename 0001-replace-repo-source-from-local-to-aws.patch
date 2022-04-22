@@ -1,0 +1,47 @@
+From 25e8d2ad04cb937d7ba5561e75b658fa5d686b03 Mon Sep 17 00:00:00 2001
+From: Lucas Bakalian <lucas.bakalian@gmail.com>
+Date: Sun, 6 Mar 2022 19:30:17 +0100
+Subject: [PATCH] replace repo source from local to aws
+
+---
+ rlang/pom.xml | 4 ++--
+ spark/pom.xml | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/rlang/pom.xml b/rlang/pom.xml
+index b20c163..14758df 100644
+--- a/rlang/pom.xml
++++ b/rlang/pom.xml
+@@ -39,10 +39,10 @@
+ 
+         <spark.archive>spark-${spark.version}</spark.archive>
+         <spark.src.download.url>
+-            http://build.luc-data.com:10080/odp-release/dist/spark/${spark.version}/${spark.archive}-src.zip
++            https://clemlabs.s3.eu-west-3.amazonaws.com/dist/spark/${spark.version}/${spark.archive}-src.zip
+         </spark.src.download.url>
+         <spark.bin.download.url>
+-            http://build.luc-data.com:10080/odp-release/dist/spark/${spark.version}/${spark.archive}-bin.zip
++            https://clemlabs.s3.eu-west-3.amazonaws.com/dist/spark//${spark.version}/${spark.archive}-bin.zip
+         </spark.bin.download.url>
+         <interpreter.jar.name>zeppelin-interpreter-r</interpreter.jar.name>
+     </properties>
+diff --git a/spark/pom.xml b/spark/pom.xml
+index c7bbf50..9ba3b61 100644
+--- a/spark/pom.xml
++++ b/spark/pom.xml
+@@ -47,10 +47,10 @@
+ 
+         <spark.archive>spark-${spark.version}</spark.archive>
+         <spark.src.download.url>
+-            http://build.luc-data.com:10080/odp-release/dist/spark/${spark.version}/${spark.archive}-src.zip
++            https://clemlabs.s3.eu-west-3.amazonaws.com/dist/spark/${spark.version}/${spark.archive}-src.zip
+         </spark.src.download.url>
+         <spark.bin.download.url>
+-            http://build.luc-data.com:10080/odp-release/dist/spark/${spark.version}/${spark.archive}-bin.zip
++            https://clemlabs.s3.eu-west-3.amazonaws.com/dist/spark//${spark.version}/${spark.archive}-bin.zip
+         </spark.bin.download.url>
+     </properties>
+ 
+-- 
+2.30.1 (Apple Git-130)
+
