@@ -23,7 +23,7 @@
     <parent>
         <artifactId>zeppelin-interpreter-parent</artifactId>
         <groupId>org.apache.zeppelin</groupId>
-        <version>0.11.0-SNAPSHOT</version>
+        <version>0.10.1.1.2.1.0-90</version>
         <relativePath>../zeppelin-interpreter-parent/pom.xml</relativePath>
     </parent>
 
@@ -34,14 +34,14 @@
 
     <properties>
         <interpreter.name>r</interpreter.name>
-        <spark.version>2.4.5</spark.version>
+        <spark.version>.1.2.1.0-90</spark.version>
 
         <spark.archive>spark-${spark.version}</spark.archive>
         <spark.src.download.url>
-            https://archive.apache.org/dist/spark/${spark.archive}/${spark.archive}.tgz
+            https://clemlabs.s3.eu-west-3.amazonaws.com/dist/spark/${spark.archive}-src.zip
         </spark.src.download.url>
         <spark.bin.download.url>
-            https://archive.apache.org/dist/spark/${spark.archive}/${spark.archive}-bin-without-hadoop.tgz
+            https://clemlabs.s3.eu-west-3.amazonaws.com/dist/spark/${spark.archive}-bin.zip
         </spark.bin.download.url>
         <interpreter.jar.name>zeppelin-interpreter-r</interpreter.jar.name>
     </properties>
@@ -101,7 +101,7 @@
 
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_2.11</artifactId>
+            <artifactId>spark-core_2.12</artifactId>
             <version>${spark.version}</version>
         </dependency>
 
