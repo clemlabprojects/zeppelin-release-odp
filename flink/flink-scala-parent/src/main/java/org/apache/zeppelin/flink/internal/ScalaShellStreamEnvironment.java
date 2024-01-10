@@ -65,7 +65,7 @@ public class ScalaShellStreamEnvironment extends StreamExecutionEnvironment {
     this.flinkILoop = checkNotNull(flinkILoop);
     this.flinkVersion = checkNotNull(flinkVersion);
     this.jarFiles = checkNotNull(JarUtils.getJarFiles(jarFiles));
-    if (flinkVersion.newerThanOrEqual(FlinkVersion.fromVersionString("1.16"))) {
+    if (flinkVersion.newerThanOrEqual(FlinkVersion.fromVersionString("1.16")) || flinkVersion.newerThanOrEqual(FlinkVersion.fromVersionString("1.17"))) {
       try {
         Field field = StreamExecutionEnvironment.class.getDeclaredField("userClassloader");
         field.setAccessible(true);
