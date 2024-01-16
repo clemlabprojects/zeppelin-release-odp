@@ -20,7 +20,7 @@
   <parent>
     <groupId>org.apache.zeppelin</groupId>
     <artifactId>spark-scala-parent</artifactId>
-    <version>0.11.0-SNAPSHOT</version>
+    <version>0.10.1.1.2.2.0-48</version>
     <relativePath>../spark-scala-parent/pom.xml</relativePath>
   </parent>
 
@@ -30,7 +30,7 @@
   <name>Zeppelin: Spark Interpreter Scala_2.11</name>
 
   <properties>
-    <spark.version>2.4.5</spark.version>
+    <spark.version>.1.2.2.0-48</spark.version>
     <spark.scala.version>2.11.12</spark.scala.version>
     <spark.scala.binary.version>2.11</spark.scala.binary.version>
     <spark.scala.compile.version>${spark.scala.version}</spark.scala.compile.version>
