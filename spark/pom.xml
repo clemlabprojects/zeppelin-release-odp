@@ -23,7 +23,7 @@
     <parent>
         <artifactId>zeppelin-interpreter-parent</artifactId>
         <groupId>org.apache.zeppelin</groupId>
-        <version>0.11.0-SNAPSHOT</version>
+        <version>0.10.1.1.2.2.0-64</version>
         <relativePath>../zeppelin-interpreter-parent/pom.xml</relativePath>
     </parent>
 
@@ -38,7 +38,7 @@
         <datanucleus.core.version>3.2.10</datanucleus.core.version>
 
         <!-- spark versions -->
-        <spark.version>3.1.2</spark.version>
+        <spark.version>.1.2.2.0-64</spark.version>
         <protobuf.version>2.5.0</protobuf.version>
         <py4j.version>0.10.9</py4j.version>
         <spark.scala.version>2.12.7</spark.scala.version>
@@ -48,10 +48,10 @@
 
         <spark.archive>spark-${spark.version}</spark.archive>
         <spark.src.download.url>
-            https://archive.apache.org/dist/spark/${spark.archive}/${spark.archive}.tgz
+            https://clemlabs.s3.eu-west-3.amazonaws.com/dist/spark/${spark.archive}-src.zip
         </spark.src.download.url>
         <spark.bin.download.url>
-            https://archive.apache.org/dist/spark/${spark.archive}/${spark.archive}-bin-without-hadoop.tgz
+            https://clemlabs.s3.eu-west-3.amazonaws.com/dist/spark/${spark.archive}-bin.zip
         </spark.bin.download.url>
     </properties>
 
