@@ -23,7 +23,7 @@
   <parent>
     <artifactId>flink-parent</artifactId>
     <groupId>org.apache.zeppelin</groupId>
-    <version>0.11.0-SNAPSHOT</version>
+    <version>0.10.1.1.2.2.0-94</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -1032,7 +1032,7 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <hive.version>2.3.4</hive.version>
+        <hive.version>.1.2.2.0-94</hive.version>
         <hiverunner.version>4.0.0</hiverunner.version>
       </properties>
     </profile>
