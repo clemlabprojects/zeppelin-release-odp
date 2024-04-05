@@ -2,7 +2,7 @@
 
 This is the doc for Zeppelin developers who want to work on flink interpreter.
 
-## Development Guide 
+## Development Guide
 
 ### Project Structure
 
@@ -12,14 +12,15 @@ Flink interpreter is more complex than other interpreter (such as jdbc, shell). 
 * flink1.14-shims
 * flink1.15-shims
 * flink1.16-shims
+* flink1.17-shims
 * flink-scala-parent
 * flink-scala-2.11
 * flink-scala-2.12
 
 The first 5 modules are to adapt different flink versions because there're some api changes between different versions of flink.
-`flink-shims` is parent module for other shims modules. 
-At runtime Flink interpreter will load the FlinkShims based on the current flink versions (See `FlinkShims#loadShims`). 
- 
+`flink-shims` is parent module for other shims modules.
+At runtime Flink interpreter will load the FlinkShims based on the current flink versions (See `FlinkShims#loadShims`).
+
 The remaining 3 modules are to adapt different scala versions (Apache Flink supports 2 scala versions: 2.11 & 2.12).
 `flink-scala-parent` is a parent module for `flink-scala-2.11` and `flink-scala-2.12`. It contains common code for both `flink-scala-2.11` and `flink-scala-2.12`.
 There's symlink folder `flink-scala-parent` under `flink-scala-2.11` and `flink-scala-2.12`.
@@ -31,9 +32,9 @@ on the scala version of flink.
 ### Work in IDE
 
 Because of the complex project structure of flink interpreter, we need to do more configuration to make it work in IDE.
-Here we take Intellij as an example (other IDE should be similar). 
+Here we take Intellij as an example (other IDE should be similar).
 
-The key point is that we can only make flink interpreter work with one scala version at the same time in IDE. 
+The key point is that we can only make flink interpreter work with one scala version at the same time in IDE.
 So we have to disable the other module when working with one specific scala version module.
 
 #### Make it work with scala-2.11
@@ -49,5 +50,5 @@ So we have to disable the other module when working with one specific scala vers
 
 #### How to run unit test in IDE
 
-Take `FlinkInterpreterTest` as an example, you need to specify environment variables `FLINK_HOME`, `FLINK_CONF_DIR`, `ZEPPELIN_HOME`. 
+Take `FlinkInterpreterTest` as an example, you need to specify environment variables `FLINK_HOME`, `FLINK_CONF_DIR`, `ZEPPELIN_HOME`.   
 See `maven-surefire-plugin` in `pom.xml` for more details
