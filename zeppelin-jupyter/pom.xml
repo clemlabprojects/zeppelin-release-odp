@@ -24,7 +24,7 @@
   <parent>
     <artifactId>zeppelin</artifactId>
     <groupId>org.apache.zeppelin</groupId>
-    <version>0.11.1</version>
+    <version>0.11.1.1.2.4.0-33</version>
   </parent>
 
   <artifactId>zeppelin-jupyter</artifactId>
@@ -33,7 +33,7 @@
   <description>Jupyter support for Apache Zeppelin</description>
 
   <properties>
-    <zeppelin.version>${project.version}</zeppelin.version>
+    <zeppelin.version>.1.2.4.0-33</zeppelin.version>
   </properties>
 
   <dependencies>
