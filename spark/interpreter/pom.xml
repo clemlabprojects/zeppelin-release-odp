@@ -23,7 +23,7 @@
   <parent>
     <artifactId>spark-parent</artifactId>
     <groupId>org.apache.zeppelin</groupId>
-    <version>0.11.1</version>
+    <version>0.11.1.1.2.4.0-64</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -53,10 +53,10 @@
 
     <spark.archive>spark-${spark.version}</spark.archive>
     <spark.src.download.url>
-      https://archive.apache.org/dist/spark/${spark.archive}/${spark.archive}.tgz
+        https://clemlabs.s3.eu-west-3.amazonaws.com/dist/spark/${spark.archive}-src.zip
     </spark.src.download.url>
     <spark.bin.download.url>
-      https://archive.apache.org/dist/spark/${spark.archive}/${spark.archive}-bin-without-hadoop.tgz
+        https://clemlabs.s3.eu-west-3.amazonaws.com/dist/spark/${spark.archive}-bin.zip
     </spark.bin.download.url>
 
     <scala.compile.version>${spark.scala.version}</scala.compile.version>
@@ -605,7 +605,7 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <spark.version>3.4.1</spark.version>
+        <spark.version>.1.2.4.0-64</spark.version>
         <protobuf.version>3.21.12</protobuf.version>
         <py4j.version>0.10.9.7</py4j.version>
       </properties>
