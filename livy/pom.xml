@@ -23,7 +23,7 @@
     <parent>
         <artifactId>zeppelin-interpreter-parent</artifactId>
         <groupId>org.apache.zeppelin</groupId>
-        <version>0.11.1</version>
+        <version>0.11.1.1.2.4.0-69</version>
         <relativePath>../zeppelin-interpreter-parent/pom.xml</relativePath>
     </parent>
 
@@ -39,9 +39,9 @@
         <spring.security.kerberosclient>1.0.1.RELEASE</spring.security.kerberosclient>
 
         <!--test library versions-->
-        <livy.version>0.7.1-incubating</livy.version>
-        <spark.version>2.4.8</spark.version>
-        <hadoop.version>${hadoop2.7.version}</hadoop.version>
+        <livy.version>.1.2.4.0-69</livy.version>
+        <spark.version>.1.2.4.0-69</spark.version>
+        <hadoop.version>.1.2.4.0-69</hadoop.version>
     </properties>
 
     <dependencies>
