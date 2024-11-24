@@ -24,7 +24,7 @@
   <groupId>org.apache.zeppelin</groupId>
   <artifactId>zeppelin</artifactId>
   <packaging>pom</packaging>
-  <version>0.11.1.1.2.4.0-71</version>
+  <version>0.11.1</version>
   <name>Zeppelin</name>
   <description>Zeppelin project</description>
   <url>https://zeppelin.apache.org</url>
@@ -135,7 +135,7 @@
     <commons.collections.version>3.2.2</commons.collections.version>
     <commons.cli.version>1.4</commons.cli.version>
     <shiro.version>1.10.0</shiro.version>
-    <bouncycastle.version>1.71</bouncycastle.version>
+    <bouncycastle.version>1.70</bouncycastle.version>
     <maven.version>3.6.3</maven.version>
     <dropwizard.version>4.1.14</dropwizard.version>
     <micrometer.version>1.6.0</micrometer.version>
@@ -145,7 +145,7 @@
     <hadoop3.1.version>3.1.3</hadoop3.1.version>
     <hadoop3.2.version>3.2.4</hadoop3.2.version>
     <hadoop3.3.version>3.3.6</hadoop3.3.version>
-    <hadoop.version>.1.2.4.0-71</hadoop.version>
+    <hadoop.version>${hadoop2.7.version}</hadoop.version>
     <hadoop.deps.scope>provided</hadoop.deps.scope>
     <hadoop-client-api.artifact>hadoop-client</hadoop-client-api.artifact>
     <hadoop-client-runtime.artifact>hadoop-yarn-api</hadoop-client-runtime.artifact>
@@ -391,7 +391,7 @@
 
       <dependency>
         <groupId>org.bouncycastle</groupId>
-        <artifactId>bcpkix-jdk18on</artifactId>
+        <artifactId>bcpkix-jdk15on</artifactId>
         <version>${bouncycastle.version}</version>
       </dependency>
 
@@ -1555,7 +1555,7 @@
                 <goal>check</goal>
               </goals>
               <configuration>
-                <failOnViolation>false</failOnViolation>
+                <failOnViolation>true</failOnViolation>
                 <excludes>org/apache/zeppelin/interpreter/thrift/*,org/apache/zeppelin/python/proto/*</excludes>
               </configuration>
             </execution>
