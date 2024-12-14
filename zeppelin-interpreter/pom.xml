@@ -24,7 +24,7 @@
   <parent>
     <artifactId>zeppelin</artifactId>
     <groupId>org.apache.zeppelin</groupId>
-    <version>0.11.1</version>
+    <version>0.11.1.1.2.4.0-88</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -259,7 +259,7 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <hadoop.version>${hadoop2.7.version}</hadoop.version>
+        <hadoop.version>.1.2.4.0-88</hadoop.version>
         <hadoop-client-api.artifact>hadoop-client</hadoop-client-api.artifact>
         <hadoop-client-runtime.artifact>hadoop-yarn-api</hadoop-client-runtime.artifact>
         <hadoop-client-minicluster.artifact>hadoop-client</hadoop-client-minicluster.artifact>
