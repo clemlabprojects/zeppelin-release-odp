@@ -24,7 +24,7 @@
     <parent>
         <artifactId>zengine-plugins-parent</artifactId>
         <groupId>org.apache.zeppelin</groupId>
-        <version>0.11.1</version>
+        <version>0.11.1.1.2.4.0-92</version>
         <relativePath>../../../zeppelin-plugins</relativePath>
     </parent>
 
@@ -54,7 +54,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <hadoop.version>${hadoop2.7.version}</hadoop.version>
+                <hadoop.version>.1.2.4.0-92</hadoop.version>
             </properties>
             <dependencies>
                 <dependency>
@@ -68,6 +68,28 @@
                     <artifactId>hadoop-client</artifactId>
                     <scope>provided</scope>
                     <version>${hadoop.version}</version>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>com.google.code.findbugs</groupId>
+                            <artifactId>jsr305</artifactId>
+                        </exclusion>
+                         <exclusion>
+                            <groupId>org.eclipse.jetty.websocket</groupId>
+                            <artifactId>websocket-client</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>org.codehaus.woodstox</groupId>
+                            <artifactId>stax2-api</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>org.eclipse.jetty</groupId>
+                            <artifactId>jetty-util</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>com.fasterxml.jackson.core</groupId>
+                            <artifactId>jackson-databind</artifactId>
+                        </exclusion>
+                    </exclusions>
                 </dependency>
             </dependencies>
         </profile>
@@ -84,6 +106,25 @@
                     <artifactId>hadoop-client</artifactId>
                     <scope>provided</scope>
                     <version>${hadoop.version}</version>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.eclipse.jetty.websocket</groupId>
+                            <artifactId>websocket-client</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>org.codehaus.woodstox</groupId>
+                            <artifactId>stax2-api</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>org.eclipse.jetty</groupId>
+                            <artifactId>jetty-util</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>com.fasterxml.jackson.core</groupId>
+                            <artifactId>jackson-databind</artifactId>
+                        </exclusion>
+                    </exclusions>
+
                 </dependency>
                 <dependency>
                     <groupId>org.apache.hadoop</groupId>
